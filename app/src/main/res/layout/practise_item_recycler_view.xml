@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="6dp">
+
+
+    <TextView
+        android:id="@+id/questionTitleTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:text="@string/short_content"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/answerListHolderTV"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/questionTitleTV"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:text="@string/short_content"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/show_more"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/answerListHolderTV"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/arrow_down"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:gravity="right"
+        android:text="Ans "
+        android:textStyle="bold" />
+
+    <at.blogc.android.views.ExpandableTextView
+        android:id="@+id/correctAnsExpandableTV"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_below="@+id/show_more"
+        android:layout_height="wrap_content"
+        android:text="Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph.Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph.Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph."
+        android:maxLines="0"
+        android:ellipsize="end"
+        app:animation_duration="750"/>
+
+
+
+</RelativeLayout>

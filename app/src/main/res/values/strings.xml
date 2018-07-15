@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Computer MCQ Q&amp;A</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="expand">Expand</string>
+    <string name="collapse">Collapse</string>
+    <string name="title">Lorem Ipsum</string>
+    <string name="show">More Information</string>
+    <string name="hide">Less information</string>
+    <string name="short_content">Lorem ipsum dolor sit amet...</string>
+</resources>
