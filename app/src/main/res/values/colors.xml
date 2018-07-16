@@ -6,5 +6,6 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorOrange">#F68159</color>
     <color name="colorLightGray">#a6abae</color>
+    <color name="colorBlack">#000000</color>
     <color name="colorBackroundWhite">#f0f2ea</color>
 </resources>

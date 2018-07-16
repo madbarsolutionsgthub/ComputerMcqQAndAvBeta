@@ -64,12 +64,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
                 if (expandableTextView.isExpanded())
                 {
                     expandableTextView.collapse();
-                    holder.getShow_more().setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.arrow_down, 0);
+              //      holder.getShow_more().setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.arrow_down, 0);
                 }
                 else
                 {
                     expandableTextView.expand();
-                    holder.getShow_more().setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.arrow_up, 0);
+                 //   holder.getShow_more().setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.arrow_up, 0);
 
                 }
             }

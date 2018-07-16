@@ -85,7 +85,6 @@ public class SelfTestHolderFragment extends Fragment {
 
         TextView testQuestionTitleTV = vu.findViewById(R.id.testQuestionTitleTV);
         TextView currentStatusTV = vu.findViewById(R.id.currentStatusTV);
-        TextView selfTestStatusTV = vu.findViewById(R.id.selfTestStatusTV);
         TextView categoryNameHolderTV = vu.findViewById(R.id.categoryNameHolderTV);
 
         if(questionAnswerModel !=null){
@@ -93,7 +92,6 @@ public class SelfTestHolderFragment extends Fragment {
                 categoryNameHolderTV.setText(currentCategory.getTitle().toString());
             }
             currentStatusTV.setText("Question : "+takenQuestions+" of "+questionAndAnsList.size());
-            selfTestStatusTV.setText("Take Question : "+takenQuestions+" Correct Ans: "+numberOfCorrectAns);
             testQuestionTitleTV.setText(questionAnswerModel.getTitle());
             for(AnswerModel obj:questionAndAnsList.get(currentDataPosition).getMcqAnswerModelList()){
                 if(obj.getIsRightAns()==1){

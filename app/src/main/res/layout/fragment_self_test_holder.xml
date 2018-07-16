@@ -43,7 +43,7 @@
                         android:layout_height="wrap_content"
                         android:text="Here Will Be Category Title"
                         android:textColor="@color/colorGray"
-                        android:textSize="12dp"
+                        android:textSize="16dp"
                         android:textStyle="bold" />
 
                     <madbarsoft.com.computermcqqa.utility.Textview_lato_thin
@@ -53,7 +53,7 @@
                         android:layout_marginTop="2dp"
                         android:text="Data Scientist"
                         android:textColor="@color/colorLightGray"
-                        android:textSize="10dp" />
+                        android:textSize="14dp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -64,56 +64,35 @@
         android:layout_marginTop="80dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/cardview_light_background"
+        android:padding="10dp"
         android:orientation="vertical"
-        android:padding="20dp"
         >
-
-        <madbarsoft.com.computermcqqa.utility.TextView_Lato
-            android:id="@+id/selfTestStatusTV"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Here Will Be Category Title"
-            android:textColor="@color/colorGray"
-            android:textSize="12dp"
-            android:layout_marginTop="10dp"
-            android:textStyle="bold" />
-
         <madbarsoft.com.computermcqqa.utility.TextView_Lato
             android:id="@+id/testQuestionTitleTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Here Will Be Category Title"
             android:textColor="@color/colorGray"
-            android:textSize="12dp"
+            android:textSize="16dp"
             android:layout_marginTop="10dp"
             android:textStyle="bold" />
-
         <ScrollView
             android:id="@+id/mcqRadioBtnHolder"
             android:layout_width="match_parent"
             android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="50dp"
-            android:orientation="vertical"
-            android:background="@color/cardview_light_background"
-            android:padding="10dp">
-
+            android:orientation="vertical">
             <RadioGroup
                 android:id="@+id/mcqRadioBtnGroupId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:textSize="14dp">
-
             </RadioGroup>
-
-
-
-
         </ScrollView>
     </LinearLayout>
-
-
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -126,33 +105,30 @@
             android:gravity="center_horizontal"
             android:orientation="horizontal"
             >
-
             <Button
                 android:id="@+id/btnHomeId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableTop="@drawable/home"
-                android:background="@color/colorOrange"
-                android:layout_margin="2dp"
-                android:padding="10dp"
                 android:layout_weight="1.0"
-                android:textSize="24sp"/>
-
+                android:background="@drawable/ripple_effect"
+                android:layout_margin="1dp"
+                android:tag="10"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBackroundWhite"
+                android:text="Quit"/>
             <Button
                 android:id="@+id/btnNextId"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
-                android:background="@color/colorOrange"
+                android:background="@drawable/ripple_effect"
                 android:layout_margin="1dp"
-                android:padding="10dp"
-                android:drawableTop="@android:drawable/ic_media_next"
-                android:layout_weight="1.0"
-                android:textSize="24sp"/>
-
-
-
+                android:tag="10"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:text="Next"
+                android:textColor="@color/colorBackroundWhite"
+                android:layout_weight="1.0" />
         </LinearLayout>
     </RelativeLayout>
-
-
 </FrameLayout>
