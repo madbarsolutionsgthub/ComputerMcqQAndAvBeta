@@ -2,11 +2,13 @@ package madbarsoft.com.computermcqqa.selftest;
 
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -134,9 +136,25 @@ public class SelfTestHolderFragment extends Fragment {
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent inten = new Intent(context, MainActivity.class );
-                inten.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(inten);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle("Do you want quit from Test ?");
+                //  builder.setMessage("This will be closed application");
+
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                    }
+                });
+                builder.setPositiveButton("Quit", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent inten = new Intent(context, MainActivity.class );
+                        inten.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(inten);
+                    }
+                });
+                AlertDialog alertDialog = builder.show();
             }
         });
         return vu;

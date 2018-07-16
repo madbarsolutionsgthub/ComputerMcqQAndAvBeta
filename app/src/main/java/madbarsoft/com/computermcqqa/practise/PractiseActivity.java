@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import org.json.JSONException;
 
@@ -12,6 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import madbarsoft.com.computermcqqa.MainActivity;
 import madbarsoft.com.computermcqqa.R;
 import madbarsoft.com.computermcqqa.main.MainService;
 import madbarsoft.com.computermcqqa.main.QuestionAnswerModel;
@@ -41,5 +43,11 @@ public class PractiseActivity extends AppCompatActivity {
         }
         RecyclerAdapter recyclerViewAdapter = new RecyclerAdapter(this, questionAnswerModelList);
         recyclerView.setAdapter(recyclerViewAdapter);
+    }
+
+    public void gotToHome(View view) {
+        Intent inten = new Intent(PractiseActivity.this, MainActivity.class );
+        inten.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(inten);
     }
 }
