@@ -74,17 +74,18 @@ public class SelfTestActivity extends AppCompatActivity implements INextBtnClick
             fragmentTransaction.commit();
         } else {
             Toast.makeText(this, "Exam End", Toast.LENGTH_SHORT).show();
-//            this.numberOfCorrectAns += isCorrectAns;
-//            FragmentManager fragmentManager = getSupportFragmentManager();
-//            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//            McqTestFinishFragment mcqTestFinishFragment = new McqTestFinishFragment();
-//            Bundle bundle = new Bundle();
-//            bundle.putInt("categoryId", categoryId);
-//            bundle.putInt("takenNumberOfQuestion", takenNumberOfQuestion);
-//            bundle.putInt("numberOfCorrectAns", numberOfCorrectAns);
-//            mcqTestFinishFragment.setArguments(bundle);
-//            fragmentTransaction.replace(R.id.fragmentContainerId, mcqTestFinishFragment);
-//            fragmentTransaction.commit();
+            this.numberOfCorrectAns += isCorrectAns;
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            SelfTestHolderFinishFragment selfTestHolderFinishFragment = new SelfTestHolderFinishFragment();
+            Bundle bundle = new Bundle();
+            bundle.putInt("currentDataPosition", currentDataPosition);
+            bundle.putInt("takenQuestions", takenQuestions);
+            bundle.putInt("numberOfCorrectAns", numberOfCorrectAns);
+            bundle.putSerializable("questionAnswerModel", questionAnswerModel);
+            selfTestHolderFinishFragment.setArguments(bundle);
+            fragmentTransaction.replace(R.id.selfTestFragmentContainerId, selfTestHolderFinishFragment);
+            fragmentTransaction.commit();
 
         }
     }
