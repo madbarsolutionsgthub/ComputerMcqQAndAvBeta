@@ -17,6 +17,7 @@ public class SelfTestService {
     // Self Test result holder shared file name
     private static final String SHP_FILE_CATEGORY_ID_10="shPrefFileCategoryId_10";
     private static final String SHP_FILE_CATEGORY_ID_11="shPrefFileCategoryId_11";
+    private static final String SHP_FILE_CATEGORY_ID_12="shPrefFileCategoryId_12";
 
     // user email (make variable public to access from outside)
     public static final String CATEGORY_ID = "categoryId";
@@ -32,22 +33,25 @@ public class SelfTestService {
     public void initSharedPrefFile(){
         if(categoryId==10){
             userPref = context.getSharedPreferences(SHP_FILE_CATEGORY_ID_10, PRIVATE_MODE);
-        }else{
+        }else if(categoryId==11){
             userPref = context.getSharedPreferences(SHP_FILE_CATEGORY_ID_11, PRIVATE_MODE);
+        }else if(categoryId==12){
+            userPref = context.getSharedPreferences(SHP_FILE_CATEGORY_ID_12, PRIVATE_MODE);
         }
-        editor = userPref.edit();
+        if(userPref!=null){
+            editor = userPref.edit();
+        }
     }
     // Get Stored Session User data
     public SelfTestModel getSelfTestResultFromShp(){
         initSharedPrefFile();
         SelfTestModel selfTestModel = new SelfTestModel();
-        selfTestModel.setCategoryId(userPref.getInt(CATEGORY_ID, -1));
-        selfTestModel.setTakenQuestions(userPref.getInt(TAKEN_QUESTIONS, -1));
-        selfTestModel.setNumberOfCorrectAns(userPref.getInt(NUMBER_OF_CORRECT_ANS, -1));
+        selfTestModel.setCategoryId(Integer.parseInt(userPref.getString(CATEGORY_ID, "0")));
+        selfTestModel.setTakenQuestions(Integer.parseInt(userPref.getString(TAKEN_QUESTIONS, "0")));
+        selfTestModel.setNumberOfCorrectAns(Integer.parseInt(userPref.getString(NUMBER_OF_CORRECT_ANS, "0")));
         selfTestModel.setTestDate(new Date());
         return selfTestModel;
     }
-    // Storing result data in Pref
     public void createSelfTestResultToShp(int categoryId, int takenQuestions, int numberofCurrectAns, Date testDate){
         initSharedPrefFile();
         editor.putString(CATEGORY_ID, String.valueOf(categoryId));

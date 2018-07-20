@@ -54,7 +54,9 @@
                         android:text="Data Scientist"
                         android:textColor="@color/colorLightGray"
                         android:textSize="14dp" />
+
                 </LinearLayout>
+
 
             </LinearLayout>
         </LinearLayout>
@@ -63,20 +65,11 @@
     <LinearLayout
         android:layout_marginTop="80dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="@color/cardview_light_background"
         android:padding="10dp"
         android:orientation="vertical"
         >
-        <madbarsoft.com.computermcqqa.utility.TextView_Lato
-            android:id="@+id/testQuestionTitleTV"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Here Will Be Category Title"
-            android:textColor="@color/colorGray"
-            android:textSize="16dp"
-            android:layout_marginTop="10dp"
-            android:textStyle="bold" />
         <ScrollView
             android:id="@+id/mcqRadioBtnHolder"
             android:layout_width="match_parent"

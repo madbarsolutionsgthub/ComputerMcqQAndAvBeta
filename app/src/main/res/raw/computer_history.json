@@ -5,9 +5,9 @@
 		"questionTitle":"First Computer ?",
 		"ansList":[
 			{"id":"1","questionId":"1","title":"a) Abacus","isRightAns":"1"},
-			{"id":"2","questionId":"1","title":"a) Intel","isRightAns":"0"},
-			{"id":"3","questionId":"1","title":"a) Microsoft","isRightAns":"0"},
-			{"id":"4","questionId":"1","title":"a) IBM","isRightAns":"0"}
+			{"id":"2","questionId":"1","title":"b) Intel","isRightAns":"0"},
+			{"id":"3","questionId":"1","title":"c) Microsoft","isRightAns":"0"},
+			{"id":"4","questionId":"1","title":"d) IBM","isRightAns":"0"}
 		]
 	},
 	{
@@ -15,10 +15,10 @@
 		"categoryId":"10",
 		"questionTitle":"Father of Computer?",
 		"ansList":[
-			{"id":"1","questionId":"1","title":"a) Ame ","isRightAns":"0"},
-			{"id":"2","questionId":"1","title":"a) Tome","isRightAns":"0"},
-			{"id":"3","questionId":"1","title":"a) Charld Babez","isRightAns":"1"},
-			{"id":"4","questionId":"1","title":"a) Keona","isRightAns":"0"}
+			{"id":"1","questionId":"2","title":"a) Ame ","isRightAns":"0"},
+			{"id":"2","questionId":"2","title":"b) Tome","isRightAns":"0"},
+			{"id":"3","questionId":"2","title":"c) Charld Babez","isRightAns":"1"},
+			{"id":"4","questionId":"2","title":"d) Keona","isRightAns":"0"}
 		]
 	},
 	{
@@ -26,10 +26,10 @@
 		"categoryId":"10",
 		"questionTitle":"First Computer Model In Bangladesh ?",
 		"ansList":[
-			{"id":"1","questionId":"1","title":"a) Windows","isRightAns":"0"},
-			{"id":"2","questionId":"1","title":"a) Mac","isRightAns":"0"},
-			{"id":"3","questionId":"1","title":"a) Linx","isRightAns":"0"},
-			{"id":"4","questionId":"1","title":"a) IBM-1620","isRightAns":"1"}
+			{"id":"1","questionId":"3","title":"a) Windows","isRightAns":"0"},
+			{"id":"2","questionId":"3","title":"b) Mac","isRightAns":"0"},
+			{"id":"3","questionId":"3","title":"c) Linx","isRightAns":"0"},
+			{"id":"4","questionId":"3","title":"d) IBM-1620","isRightAns":"1"}
 		]
 	},
 	{
@@ -37,10 +37,10 @@
 		"categoryId":"10",
 		"questionTitle":"Kawran Bazer agun lagce kobe?",
 		"ansList":[
-			{"id":"1","questionId":"1","title":"a) Aj ","isRightAns":"1"},
-			{"id":"2","questionId":"1","title":"a) janina","isRightAns":"0"},
-			{"id":"3","questionId":"1","title":"a) porso","isRightAns":"0"},
-			{"id":"4","questionId":"1","title":"a) doy din age","isRightAns":"0"}
+			{"id":"1","questionId":"4","title":"a) Aj ","isRightAns":"1"},
+			{"id":"2","questionId":"4","title":"b) janina","isRightAns":"0"},
+			{"id":"3","questionId":"4","title":"c) porso","isRightAns":"0"},
+			{"id":"4","questionId":"4","title":"d) doy din age","isRightAns":"0"}
 		]
 	},
 	{
@@ -48,10 +48,10 @@
 		"categoryId":"10",
 		"questionTitle":"Ame use kor ?",
 		"ansList":[
-			{"id":"1","questionId":"1","title":"a) Windows","isRightAns":"1"},
-			{"id":"2","questionId":"1","title":"a) Mac","isRightAns":"0"},
-			{"id":"3","questionId":"1","title":"a) Linx","isRightAns":"0"},
-			{"id":"4","questionId":"1","title":"a) IBM-1620","isRightAns":"0"}
+			{"id":"1","questionId":"5","title":"a) Windows","isRightAns":"1"},
+			{"id":"2","questionId":"5","title":"b) Mac","isRightAns":"0"},
+			{"id":"3","questionId":"5","title":"c) Linx","isRightAns":"0"},
+			{"id":"4","questionId":"5","title":"d) IBM-1620","isRightAns":"0"}
 		]
 	},
 	{
@@ -59,10 +59,10 @@
 		"categoryId":"10",
 		"questionTitle":"Father of Google?",
 		"ansList":[
-			{"id":"1","questionId":"1","title":"a) Venton g carf ","isRightAns":"1"},
-			{"id":"2","questionId":"1","title":"a) Tome","isRightAns":"0"},
-			{"id":"3","questionId":"1","title":"a) Charld Babez","isRightAns":"0"},
-			{"id":"4","questionId":"1","title":"a) No one","isRightAns":"0"}
+			{"id":"1","questionId":"6","title":"a) Venton g carf ","isRightAns":"1"},
+			{"id":"2","questionId":"6","title":"b) Tome","isRightAns":"0"},
+			{"id":"3","questionId":"6","title":"c) Charld Babez","isRightAns":"0"},
+			{"id":"4","questionId":"6","title":"d) No one","isRightAns":"0"}
 		]
 	},
 	{
@@ -70,10 +70,10 @@
 		"categoryId":"10",
 		"questionTitle":"Inventor of Mouse ?",
 		"ansList":[
-			{"id":"1","questionId":"1","title":"a) Sakhasena","isRightAns":"0"},
-			{"id":"2","questionId":"1","title":"a) Khalida","isRightAns":"0"},
-			{"id":"3","questionId":"1","title":"a) Doglas Angle Bard","isRightAns":"1"},
-			{"id":"4","questionId":"1","title":"a) Salim Vi","isRightAns":"0"}
+			{"id":"1","questionId":"7","title":"a) Sakhasena","isRightAns":"0"},
+			{"id":"2","questionId":"7","title":"b) Khalida","isRightAns":"0"},
+			{"id":"3","questionId":"7","title":"c) Doglas Angle Bard","isRightAns":"1"},
+			{"id":"4","questionId":"7","title":"d) Salim Vi","isRightAns":"0"}
 		]
 	}
 

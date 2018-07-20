@@ -37,7 +37,7 @@
                     android:orientation="vertical"
                     android:paddingLeft="10dp">
                     <madbarsoft.com.computermcqqa.utility.TextView_Lato
-                        android:id="@+id/practiseCategoryNameHolderId"
+                        android:id="@+id/practiseCategoryTitleTV"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Computer History"
@@ -45,7 +45,7 @@
                         android:textSize="16dp"
                         android:textStyle="bold" />
                     <madbarsoft.com.computermcqqa.utility.Textview_lato_thin
-                        android:id="@+id/practiseSubCategoryNameHolderId"
+                        android:id="@+id/practiseSubCategoryTitleTV"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"

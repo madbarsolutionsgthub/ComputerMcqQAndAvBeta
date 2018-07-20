@@ -22,12 +22,12 @@ public class MainService {
         String json;
         InputStream inputStream=null;
 
-        if(categoryId==11){
-            inputStream = appCompatActivity.getResources().openRawResource(R.raw.file_networking);
-        }else if(categoryId==22){
-            inputStream = appCompatActivity.getResources().openRawResource(R.raw.file_operatingsystem);
-        }else if(categoryId==10){
+        if(categoryId==10){
             inputStream = appCompatActivity.getResources().openRawResource(R.raw.computer_history);
+        }else if(categoryId==11){
+            inputStream = appCompatActivity.getResources().openRawResource(R.raw.file_networking);
+        }else if(categoryId==12){
+            inputStream = appCompatActivity.getResources().openRawResource(R.raw.file_operatingsystem);
         }else{
             inputStream = appCompatActivity.getResources().openRawResource(R.raw.question_answer_empty_data);
         }

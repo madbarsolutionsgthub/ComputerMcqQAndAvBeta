@@ -93,7 +93,7 @@ public class SelfTestHolderFragment extends Fragment {
             if(currentCategory !=null){
                 categoryNameHolderTV.setText(currentCategory.getTitle().toString());
             }
-            currentStatusTV.setText("Question : "+takenQuestions+" of "+questionAndAnsList.size());
+            currentStatusTV.setText("Question : "+questionAnswerModel.getId()+" of "+questionAndAnsList.size());
             testQuestionTitleTV.setText(questionAnswerModel.getTitle());
             for(AnswerModel obj:questionAndAnsList.get(currentDataPosition).getMcqAnswerModelList()){
                 if(obj.getIsRightAns()==1){
@@ -123,11 +123,11 @@ public class SelfTestHolderFragment extends Fragment {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if((questionAndAnsList.size()-1) != currentDataPosition) {
-                    iNextBtnClickListener.nextData(questionAndAnsList.get((currentDataPosition + 1)), (currentDataPosition + 1), isCorrectAns, 0);
+                if((currentCategory.getNumberOfQuestion()-1) > currentDataPosition) {
+                    iNextBtnClickListener.nextData((currentDataPosition + 1), isCorrectAns, 0);
                     return;
                 }
-                iNextBtnClickListener.nextData(questionAndAnsList.get((currentDataPosition)), (currentDataPosition), isCorrectAns,1);
+                iNextBtnClickListener.nextData((currentDataPosition), isCorrectAns,1);
                 btnNext.setEnabled(false);
                 btnNext.setBackgroundColor(Color.GRAY);
 

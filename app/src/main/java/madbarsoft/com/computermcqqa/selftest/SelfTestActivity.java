@@ -22,7 +22,7 @@ public class SelfTestActivity extends AppCompatActivity implements INextBtnClick
 
     private int numberOfCorrectAns;
     private int categoryId;
-    private int takenQuestions;
+    private int takenQuestions=1;
     private List<QuestionAnswerModel> questionAndAnsList;
     private QuestionAnswerModel questionAnswerModel;
 
@@ -57,7 +57,8 @@ public class SelfTestActivity extends AppCompatActivity implements INextBtnClick
     }
 
     @Override
-    public void nextData(QuestionAnswerModel questionAnswerModel, int currentDataPosition, int isCorrectAns, int isFinishTest) {
+    public void nextData(int currentDataPosition, int isCorrectAns, int isFinishTest) {
+
         if (isFinishTest == 0) {
             takenQuestions++;
             this.numberOfCorrectAns += isCorrectAns;
@@ -68,21 +69,19 @@ public class SelfTestActivity extends AppCompatActivity implements INextBtnClick
             bundle.putInt("currentDataPosition", currentDataPosition);
             bundle.putInt("takenQuestions", takenQuestions);
             bundle.putInt("numberOfCorrectAns", numberOfCorrectAns);
-            bundle.putSerializable("questionAnswerModel", questionAnswerModel);
+            bundle.putSerializable("questionAnswerModel", questionAndAnsList.get(currentDataPosition));
             selfTestHolderFragment.setArguments(bundle);
             fragmentTransaction.replace(R.id.selfTestFragmentContainerId, selfTestHolderFragment);
             fragmentTransaction.commit();
         } else {
-            Toast.makeText(this, "Exam End", Toast.LENGTH_SHORT).show();
             this.numberOfCorrectAns += isCorrectAns;
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             SelfTestHolderFinishFragment selfTestHolderFinishFragment = new SelfTestHolderFinishFragment();
             Bundle bundle = new Bundle();
-            bundle.putInt("currentDataPosition", currentDataPosition);
+            bundle.putInt("categoryId", categoryId);
             bundle.putInt("takenQuestions", takenQuestions);
             bundle.putInt("numberOfCorrectAns", numberOfCorrectAns);
-            bundle.putSerializable("questionAnswerModel", questionAnswerModel);
             selfTestHolderFinishFragment.setArguments(bundle);
             fragmentTransaction.replace(R.id.selfTestFragmentContainerId, selfTestHolderFinishFragment);
             fragmentTransaction.commit();

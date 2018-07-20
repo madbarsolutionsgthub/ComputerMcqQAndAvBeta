@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public class ChartService {
 
     public void setPieChart(PieChart pieChart, int takenQuestions, int numberOfCurrectAns, int categoryId){
+
         pieChart.setDrawHoleEnabled(false);
         pieChart.setHoleColor(Color.WHITE);
         pieChart.setTransparentCircleRadius(10f);

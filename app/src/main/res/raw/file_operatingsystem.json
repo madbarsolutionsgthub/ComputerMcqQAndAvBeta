@@ -1,22 +1,46 @@
 [
 	{
-		"sNo":"1",
-		"categoryId":"22",
-		"qst":"What is Operating System ?",
-		"ans":
-		"Switch is the Nwtworking hardware device for Connection morethen one computer, Switch is the Nwtworking hardware device for Connection morethen one computer, Switch is the Nwtworking hardware device for Connection morethen one computer.\n Switch is the Nwtworking hardware device for Connection morethen one computer. Switch is the Nwtworking hardware device for Connection morethen one computer, Switch is the Nwtworking hardware device for Connection morethen one computer, Switch is the Nwtworking hardware device for Connection morethen one computer, Switch is the Nwtworking hardware device for Connection morethen one computer.\nSwitch is the Nwtworking hardware device for Connection morethen one computer.\n\nSwitch is the Nwtworking hardware device for Connection morethen one computer, Switch is the Nwtworking hardware device for Connection morethen one computer, Switch is the Nwtworking hardware device for Connection morethen one computer."
+		"id":"1",
+		"categoryId":"12",
+		"questionTitle":"Microsoft first Operating system ?",
+		"ansList":[
+			{"id":"1","questionId":"1","title":"a) MS-DOS","isRightAns":"1"},
+			{"id":"2","questionId":"1","title":"b) Winsows","isRightAns":"0"},
+			{"id":"3","questionId":"1","title":"c) Mac","isRightAns":"0"},
+			{"id":"4","questionId":"1","title":"d) Linux","isRightAns":"0"}
+		]
 	},
 	{
-		"sNo":"2",
-		"categoryId":"22",
-		"qst":"Type of Operating System ?",
-		"ans":"Router is the Nwtworking hardware device for Connection morethen one computer."
+		"id":"2",
+		"categoryId":"12",
+		"questionTitle":"Windows is a?",
+		"ansList":[
+			{"id":"1","questionId":"2","title":"a) Program ","isRightAns":"0"},
+			{"id":"2","questionId":"2","title":"b) OS","isRightAns":"1"},
+			{"id":"3","questionId":"2","title":"c) Virous","isRightAns":"0"},
+			{"id":"4","questionId":"2","title":"d) Nothing of them","isRightAns":"0"}
+		]
 	},
 	{
-		"sNo":"3",
-		"categoryId":"22",
-		"qst":"Used of operating System?",
-		"ans":"Switch is the Nwtworking hardware device for Connection morethen one computer, Switch is the Nwtworking hardware device for Connection morethen one computer, Switch is the Nwtworking hardware device for Connection morethen one computer, Switch is the Nwtworking hardware device for Connection morethen one computer. Switch is the Nwtworking hardware device for Connection morethen one computer, Switch is the Nwtworking hardware device for Connection morethen one computer, Switch is the Nwtworking hardware device for Connection morethen one computer, Switch is the Nwtworking hardware device for Connection morethen one computer. ,Switch is the Nwtworking hardware device for Connection morethen one computer, Switch is the Nwtworking hardware device for Connection morethen one computer, Switch is the Nwtworking hardware device for Connection morethen one computer, Switch is the Nwtworking hardware device for Connection morethen one computer.Switch is the Nwtworking hardware device for Connection morethen one computer, Switch is the Nwtworking hardware device for Connection morethen one computer, Switch is the Nwtworking hardware device for Connection morethen one computer, Switch is the Nwtworking hardware device for Connection morethen one computer.Getway is the Nwtworking hardware device for Connection morethen one computer."
+		"id":"3",
+		"categoryId":"12",
+		"questionTitle":"Android base Os ?",
+		"ansList":[
+			{"id":"1","questionId":"3","title":"a) Windows","isRightAns":"0"},
+			{"id":"2","questionId":"3","title":"b) Mac","isRightAns":"0"},
+			{"id":"3","questionId":"3","title":"c) Non of this","isRightAns":"0"},
+			{"id":"4","questionId":"3","title":"d) Linux","isRightAns":"1"}
+		]
+	},
+	{
+		"id":"4",
+		"categoryId":"12",
+		"questionTitle":"Bangladesh widely used OS",
+		"ansList":[
+			{"id":"1","questionId":"4","title":"a) Windows","isRightAns":"1"},
+			{"id":"2","questionId":"4","title":"b) Mac","isRightAns":"0"},
+			{"id":"3","questionId":"4","title":"c) Linux","isRightAns":"0"},
+			{"id":"4","questionId":"4","title":"d) Unix","isRightAns":"0"}
+		]
 	}
-
 ]

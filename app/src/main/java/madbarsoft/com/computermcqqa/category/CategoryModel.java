@@ -7,6 +7,8 @@ public class CategoryModel {
     private String description;
     private int numberOfQuestion;
 
+    public CategoryModel(){}
+
     public CategoryModel(int id, int sNo, String title, String description, int numberOfQuestion) {
         this.id = id;
         this.sNo = sNo;

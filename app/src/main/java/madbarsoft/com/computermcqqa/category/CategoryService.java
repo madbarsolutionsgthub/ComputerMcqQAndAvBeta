@@ -30,4 +30,23 @@ public class CategoryService{
         return categoryList;
         //   Toast.makeText(this, "Data: "+categoryList.toString(), Toast.LENGTH_SHORT).show();
     }
+
+    public CategoryModel getCategoryById(AppCompatActivity appCompatActivity, int categoryId) throws IOException, JSONException {
+        String json;
+        CategoryModel categoryModel = new CategoryModel();
+        InputStream inputStream = appCompatActivity.getResources().openRawResource(R.raw.category_json_data);
+        int size = inputStream.available();
+        byte[] buffer = new byte[size];
+        inputStream.read(buffer);
+        inputStream.close();
+        json = new String(buffer, "UTF-8");
+        JSONArray jsonArray=new JSONArray(json);
+        for(int i=0; i<jsonArray.length(); i++){
+            JSONObject obj = jsonArray.getJSONObject(i);
+            if(Integer.parseInt(obj.getString("id"))==categoryId){
+                categoryModel = new CategoryModel(Integer.parseInt(obj.getString("id")), Integer.parseInt(obj.getString("sNo")),obj.getString("title").toString(), obj.getString("description").toString(), Integer.parseInt(obj.getString("numberOfQuestion")) );
+            }
+        }
+        return categoryModel;
+    }
 }

@@ -1,87 +1,46 @@
 [
 	{
-		"sNo":"1",
+		"id":"1",
 		"categoryId":"11",
-		"qst":"What is Switch ?",
-		"ans":"Switch is the Nwtworking hardware device for Connection morethen one computer."
+		"questionTitle":"Name of Main Circute Board of Computer ?",
+		"ansList":[
+			{"id":"1","questionId":"1","title":"a) Mother Board","isRightAns":"1"},
+			{"id":"2","questionId":"1","title":"b) IC","isRightAns":"0"},
+			{"id":"3","questionId":"1","title":"c) Ram","isRightAns":"0"},
+			{"id":"4","questionId":"1","title":"d) Setob Box","isRightAns":"0"}
+		]
 	},
 	{
-		"sNo":"2",
+		"id":"2",
 		"categoryId":"11",
-		"qst":"What is Router?",
-		"ans":"Router is the Nwtworking hardware device for Connection morethen one computer."
+		"questionTitle":"Primary Memory of Computer?",
+		"ansList":[
+			{"id":"1","questionId":"2","title":"a) Ram ","isRightAns":"0"},
+			{"id":"2","questionId":"2","title":"b) Rom","isRightAns":"1"},
+			{"id":"3","questionId":"2","title":"c) Hard disk","isRightAns":"0"},
+			{"id":"4","questionId":"2","title":"d) Tep drive","isRightAns":"0"}
+		]
 	},
 	{
-		"sNo":"3",
+		"id":"3",
 		"categoryId":"11",
-		"qst":"What is GetWay?",
-		"ans":"Getway is the Nwtworking hardware device for Connection morethen one computer."
+		"questionTitle":"Display is a device of ?",
+		"ansList":[
+			{"id":"1","questionId":"3","title":"a) Input","isRightAns":"0"},
+			{"id":"2","questionId":"3","title":"b) Output","isRightAns":"0"},
+			{"id":"3","questionId":"3","title":"c) Non of this","isRightAns":"0"},
+			{"id":"4","questionId":"3","title":"d) Both","isRightAns":"1"}
+		]
 	},
 	{
-		"sNo":"4",
+		"id":"4",
 		"categoryId":"11",
-		"qst":"What is Brized?",
-		"ans":"Brized is the Nwtworking hardware device for Connection morethen one computer."
-	},
-	{
-		"sNo":"5",
-		"categoryId":"11",
-		"qst":"What is Nic?",
-		"ans":"Nic is the Nwtworking hardware device for Connection morethen one computer."
-	},
-	{
-		"sNo":"6",
-		"categoryId":"11",
-		"qst":"What is Modem?",
-		"ans":"Modem is the Nwtworking hardware device for Connection morethen one computer."
-	},
-	{
-		"sNo":"7",
-		"categoryId":"11",
-		"qst":"What is Brized?",
-		"ans":"Firewall is the Nwtworking hardware device for Connection morethen one computer."
-	},
-	{
-		"sNo":"8",
-		"categoryId":"11",
-		"qst":"What is Ram ?",
-		"ans":"Ram is the Nwtworking hardware device for Connection morethen one computer."
-	},
-	{
-		"sNo":"9",
-		"categoryId":"11",
-		"qst":"What is Rom?",
-		"ans":"Rom is the Nwtworking hardware device for Connection morethen one computer."
-	},
-	{
-		"sNo":"10",
-		"categoryId":"11",
-		"qst":"What is Motherboard?",
-		"ans":"Motherboard is the Nwtworking hardware device for Connection morethen one computer."
-	},
-	{
-		"sNo":"11",
-		"categoryId":"11",
-		"qst":"What is Keyboard?",
-		"ans":"Keyboard is the Nwtworking hardware device for Connection morethen one computer."
-	},
-	{
-		"sNo":"12",
-		"categoryId":"11",
-		"qst":"What is Mouse?",
-		"ans":"Mouse is the Nwtworking hardware device for Connection morethen one computer."
-	},
-	{
-		"sNo":"13",
-		"categoryId":"11",
-		"qst":"What is USB?",
-		"ans":"USB is the Nwtworking hardware device for Connection morethen one computer."
-	},
-	{
-		"sNo":"14",
-		"categoryId":"11",
-		"qst":"What is Power?",
-		"ans":"Power is the Nwtworking hardware device for Connection morethen one computer."
+		"questionTitle":"Network card is",
+		"ansList":[
+			{"id":"1","questionId":"4","title":"a) Nic card ","isRightAns":"1"},
+			{"id":"2","questionId":"4","title":"b) Atm card","isRightAns":"0"},
+			{"id":"3","questionId":"4","title":"c) ram","isRightAns":"0"},
+			{"id":"4","questionId":"4","title":"d) TV card","isRightAns":"0"}
+		]
 	}
-
 ]

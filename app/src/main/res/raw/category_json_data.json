@@ -4,60 +4,60 @@
                 "id":"10",
 		"title":"Computer History",
                 "description":"About Computer history",
-		"numberOfQuestion":"100"
+		"numberOfQuestion":"7"
 	},
         {
                 "sNo":"2",
                 "id":"11",
-		"title":"Computer Hardware",
+		"title":"Computer Network",
                 "description":"About Computer History",
-		"numberOfQuestion":"100"
+		"numberOfQuestion":"4"
 	},
 	{
                 "sNo":"3",
-                "id":"22",
+                "id":"12",
 		"title":"Operating System",
                 "description":"About Computer Operating System",
-		"numberOfQuestion":"100"
+		"numberOfQuestion":"4"
 	},
 	{
                 "sNo":"4",
-                "id":"33",
+                "id":"13",
 		"title":"I/O Device",
                 "description":"About Computer Input Output Device",
 		"numberOfQuestion":"100"
 	},
 	{
                 "sNo":"5",
-                "id":"44",
+                "id":"14",
 		"title":"Computer Hardware",
                 "description":"About Computer Hardware",
 		"numberOfQuestion":"100"
 	},
 	{
                 "sNo":"6",
-                "id":"55",
+                "id":"15",
 		"title":"Computer Software",
                 "description":"About Computer Software",
 		"numberOfQuestion":"100"
 	},
         {
                 "sNo":"7",
-                "id":"66",
+                "id":"16",
 		"title":"Computer Internate",
                 "description":"About Computer Internate",
 		"numberOfQuestion":"100"
 	},
 	{
                 "sNo":"8",
-                "id":"77",
+                "id":"17",
 		"title":"Computer Networking",
                 "description":"About Computer Networking",
 		"numberOfQuestion":"100"
 	},
         {
                 "sNo":"9",
-                "id":"88",
+                "id":"18",
 		"title":"Computer eComarch",
                 "description":"About Computer Ecomarch",
 		"numberOfQuestion":"100"
