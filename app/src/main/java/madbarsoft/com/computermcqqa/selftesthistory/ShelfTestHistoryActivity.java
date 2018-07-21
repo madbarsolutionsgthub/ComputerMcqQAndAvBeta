@@ -7,6 +7,8 @@ import android.widget.Toast;
 
 import com.github.mikephil.charting.charts.PieChart;
 
+import java.text.SimpleDateFormat;
+
 import madbarsoft.com.computermcqqa.R;
 import madbarsoft.com.computermcqqa.selftest.SelfTestModel;
 import madbarsoft.com.computermcqqa.selftest.SelfTestService;
@@ -29,21 +31,32 @@ public class ShelfTestHistoryActivity extends AppCompatActivity {
 
         selfTestService = new SelfTestService(this, 10);
         selfTestModel = selfTestService.getSelfTestResultFromShp();
+
+        textView =  findViewById(R.id.showSelfTestHistorySubCategoryTitleTVctId_10);
+        textView.setText("Correct Answer: "+selfTestModel.getNumberOfCorrectAns()+" Of "+selfTestModel.getTakenQuestions());
+
+        textView =  findViewById(R.id.showSelfTestHistoryDateTVctId_10);
+        SimpleDateFormat outPutFormate = new SimpleDateFormat("dd MMM yyyy");
+        textView.setText("Date: "+outPutFormate.format(selfTestModel.getTestDate()));
+
         if(selfTestModel.getTakenQuestions()>0){
             pieChart = (PieChart) findViewById(R.id.selfTestResultPCctId_10);
-            chartService.setPieChart(pieChart, selfTestModel.getTakenQuestions(), selfTestModel.getNumberOfCorrectAns(), 10);
+            pieChart.setNoDataText("No Quiz Taken yet...!");
+            chartService.pieDateForShowHistory(pieChart, selfTestModel.getTakenQuestions(), selfTestModel.getNumberOfCorrectAns());
         }
         selfTestService = new SelfTestService(this, 11);
         selfTestModel = selfTestService.getSelfTestResultFromShp();
         if(selfTestModel.getTakenQuestions()>0){
             pieChart = (PieChart) findViewById(R.id.selfTestResultPCctId_11);
-            chartService.setPieChart(pieChart, selfTestModel.getTakenQuestions(), selfTestModel.getNumberOfCorrectAns(), 11);
+            pieChart.setNoDataText("No Quiz Taken yet...!");
+            chartService.pieDateForShowHistory(pieChart, selfTestModel.getTakenQuestions(), selfTestModel.getNumberOfCorrectAns());
         }
         selfTestService = new SelfTestService(this, 12);
         selfTestModel = selfTestService.getSelfTestResultFromShp();
         if(selfTestModel.getTakenQuestions()>0){
             pieChart = (PieChart) findViewById(R.id.selfTestResultPCctId_12);
-            chartService.setPieChart(pieChart, selfTestModel.getTakenQuestions(), selfTestModel.getNumberOfCorrectAns(), 12);
+            pieChart.setNoDataText("No Quiz Taken yet...!");
+            chartService.pieDateForShowHistory(pieChart, selfTestModel.getTakenQuestions(), selfTestModel.getNumberOfCorrectAns());
         }
     }
 }

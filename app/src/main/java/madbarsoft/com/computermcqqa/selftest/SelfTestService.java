@@ -3,8 +3,11 @@ package madbarsoft.com.computermcqqa.selftest;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.logging.SimpleFormatter;
 
 public class SelfTestService {
 
@@ -49,7 +52,16 @@ public class SelfTestService {
         selfTestModel.setCategoryId(Integer.parseInt(userPref.getString(CATEGORY_ID, "0")));
         selfTestModel.setTakenQuestions(Integer.parseInt(userPref.getString(TAKEN_QUESTIONS, "0")));
         selfTestModel.setNumberOfCorrectAns(Integer.parseInt(userPref.getString(NUMBER_OF_CORRECT_ANS, "0")));
-        selfTestModel.setTestDate(new Date());
+       // selfTestModel.setTestDate(new Date(userPref.getString(DATE_OF_TEST, "")));
+
+        String stDate = userPref.getString(DATE_OF_TEST, new Date().toString());
+        SimpleDateFormat getFormatter = new SimpleDateFormat("EEE MMM dd HH:mm:ss Z yyyy");
+        try {
+            Date date = getFormatter.parse(stDate);
+            selfTestModel.setTestDate(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
         return selfTestModel;
     }
     public void createSelfTestResultToShp(int categoryId, int takenQuestions, int numberofCurrectAns, Date testDate){
