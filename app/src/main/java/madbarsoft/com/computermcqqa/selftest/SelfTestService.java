@@ -21,6 +21,7 @@ public class SelfTestService {
     private static final String SHP_FILE_CATEGORY_ID_10="shPrefFileCategoryId_10";
     private static final String SHP_FILE_CATEGORY_ID_11="shPrefFileCategoryId_11";
     private static final String SHP_FILE_CATEGORY_ID_12="shPrefFileCategoryId_12";
+    private static final String SHP_FILE_CATEGORY_ID_99="shPrefFileCategoryId_99";
 
     // user email (make variable public to access from outside)
     public static final String CATEGORY_ID = "categoryId";
@@ -40,6 +41,8 @@ public class SelfTestService {
             userPref = context.getSharedPreferences(SHP_FILE_CATEGORY_ID_11, PRIVATE_MODE);
         }else if(categoryId==12){
             userPref = context.getSharedPreferences(SHP_FILE_CATEGORY_ID_12, PRIVATE_MODE);
+        }else{
+            userPref = context.getSharedPreferences(SHP_FILE_CATEGORY_ID_99, PRIVATE_MODE);
         }
         if(userPref!=null){
             editor = userPref.edit();
@@ -54,7 +57,7 @@ public class SelfTestService {
         selfTestModel.setNumberOfCorrectAns(Integer.parseInt(userPref.getString(NUMBER_OF_CORRECT_ANS, "0")));
        // selfTestModel.setTestDate(new Date(userPref.getString(DATE_OF_TEST, "")));
 
-        String stDate = userPref.getString(DATE_OF_TEST, new Date().toString());
+        String stDate = userPref.getString(DATE_OF_TEST,"");
         SimpleDateFormat getFormatter = new SimpleDateFormat("EEE MMM dd HH:mm:ss Z yyyy");
         try {
             Date date = getFormatter.parse(stDate);

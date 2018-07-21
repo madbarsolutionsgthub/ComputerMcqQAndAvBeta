@@ -7,10 +7,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".selftesthistory.ShelfTestHistoryActivity">
-
     <android.support.v7.widget.CardView
         android:id="@+id/shelfTestHistoryHeaderCV"
         android:layout_width="match_parent"
+        android:onClick="gotToHome"
         android:layout_height="80dp"
         android:layout_marginTop="7dp"
         card_view:cardCornerRadius="2dp"
@@ -112,19 +112,11 @@
                             android:layout_alignParentRight="true"
                             android:layout_marginRight="20dp"
                             android:gravity="center_vertical">
-
-                            <View
-                                android:layout_width="7dp"
-                                android:layout_height="7dp"
-                                android:layout_alignParentRight="true"
-                                android:background="@drawable/gree_circle"></View>
-
                             <madbarsoft.com.computermcqqa.utility.TextView_Lato
                                 android:id="@+id/showSelfTestHistoryDateTVctId_10"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="5dp"
-                                android:text="CONFIRMED"
                                 android:textColor="@color/colorPrimary"
                                 android:textSize="12dp"
                                 android:textStyle="bold" />
@@ -140,7 +132,7 @@
                                 android:id="@+id/showSelfTestHistorySubCategoryTitleTVctId_10"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Today : 5:40 pm"
+                                android:text="Correct Ans : 10 of 20"
                                 android:textColor="@color/colorLightGray"
                                 android:textSize="12dp"
                                 android:textStyle="bold" />
@@ -161,105 +153,168 @@
                     </com.github.mikephil.charting.charts.PieChart>
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.CardView
-                    android:id="@+id/categoryHolderCVctId_11"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.0"
-                    android:layout_marginBottom="5dp"
-                    card_view:cardCornerRadius="2dp"
-                    card_view:cardElevation="4dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/cardview_bg"
-                        android:orientation="horizontal">
-                        <View
-                            android:layout_width="5dp"
-                            android:layout_height="200dp"
-                            android:background="@color/colorPrimary"></View>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="top"
-                            android:layout_marginTop="20dp"
-                            android:orientation="vertical"
-                            android:paddingLeft="10dp">
-                            <madbarsoft.com.computermcqqa.utility.TextView_Lato
-                                android:id="@+id/showSelfTestHistoryCategoryTitleTVctId_11"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Computer History"
-                                android:textColor="@color/colorGray"
-                                android:textSize="16dp"
-                                android:textStyle="bold" />
-                            <madbarsoft.com.computermcqqa.utility.Textview_lato_thin
-                                android:id="@+id/showSelfTestHistorySubCategoryTitleTVctId_11"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="2dp"
-                                android:text="Question: 50"
-                                android:textColor="@color/colorLightGray"
-                                android:textSize="14dp" />
-                            <com.github.mikephil.charting.charts.PieChart
-                                android:layout_width="match_parent"
-                                android:layout_height="150dp"
-                                android:id="@+id/selfTestResultPCctId_11">
-                            </com.github.mikephil.charting.charts.PieChart>
-                        </LinearLayout>
-
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-                <android.support.v7.widget.CardView
-                android:id="@+id/categoryHolderCVctId_12"
+            <android.support.v7.widget.CardView
+                android:id="@+id/categoryHolderCVctId_11"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.0"
-                    android:layout_marginBottom="5dp"
+                android:layout_height="200dp"
                 card_view:cardCornerRadius="2dp"
+                android:layout_marginBottom="5dp"
                 card_view:cardElevation="4dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/cardview_bg"
                     android:orientation="horizontal">
                     <View
                         android:layout_width="5dp"
                         android:layout_height="200dp"
                         android:background="@color/colorPrimary"></View>
-                    <LinearLayout
+                    <RelativeLayout
+                        android:id="@+id/cardTitldBlockCtId_11"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="top"
-                        android:layout_marginTop="20dp"
-                        android:orientation="vertical"
-                        android:paddingLeft="10dp">
+                        android:layout_height="50dp"
+                        android:paddingLeft="10dp"
+                        android:layout_marginTop="10dp">
+
                         <madbarsoft.com.computermcqqa.utility.TextView_Lato
-                            android:id="@+id/showSelfTestHistoryCategoryTitleTVctId_12"
-                            android:layout_width="match_parent"
+                            android:id="@+id/showSelfTestHistoryCategoryTitleTVctId_11"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Computer History"
+                            android:text="Computer Hardware"
                             android:textColor="@color/colorGray"
                             android:textSize="16dp"
                             android:textStyle="bold" />
-                        <madbarsoft.com.computermcqqa.utility.Textview_lato_thin
-                            android:id="@+id/showSelfTestHistorySubCategoryTitleTVctId_12"
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center_vertical">
+                            <madbarsoft.com.computermcqqa.utility.TextView_Lato
+                                android:id="@+id/showSelfTestHistoryDateTVctId_11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:text="Question: 50"
-                            android:textColor="@color/colorLightGray"
-                            android:textSize="14dp" />
-                        <com.github.mikephil.charting.charts.PieChart
-                            android:layout_width="match_parent"
-                            android:layout_height="150dp"
-                            android:id="@+id/selfTestResultPCctId_12">
-                        </com.github.mikephil.charting.charts.PieChart>
-                    </LinearLayout>
-
+                            android:layout_below="@+id/showSelfTestHistoryCategoryTitleTVctId_11"
+                            android:layout_marginTop="3dp"
+                            android:orientation="horizontal">
+                            <madbarsoft.com.computermcqqa.utility.Textview_lato_thin
+                                android:id="@+id/showSelfTestHistorySubCategoryTitleTVctId_11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Correct Ans : 0 of 0"
+                                android:textColor="@color/colorLightGray"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </RelativeLayout>
                 </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/cardChartBlockCtId_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="50dp">
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:id="@+id/selfTestResultPCctId_11">
+                    </com.github.mikephil.charting.charts.PieChart>
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/categoryHolderCVctId_12"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                card_view:cardCornerRadius="2dp"
+                android:layout_marginBottom="5dp"
+                card_view:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cardview_bg"
+                    android:orientation="horizontal">
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="200dp"
+                        android:background="@color/colorPrimary"></View>
+                    <RelativeLayout
+                        android:id="@+id/cardTitldBlockCtId_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingLeft="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <madbarsoft.com.computermcqqa.utility.TextView_Lato
+                            android:id="@+id/showSelfTestHistoryCategoryTitleTVctId_12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Operating System"
+                            android:textColor="@color/colorGray"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center_vertical">
+
+                            <madbarsoft.com.computermcqqa.utility.TextView_Lato
+                                android:id="@+id/showSelfTestHistoryDateTVctId_12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/showSelfTestHistoryCategoryTitleTVctId_12"
+                            android:layout_marginTop="3dp"
+                            android:orientation="horizontal">
+                            <madbarsoft.com.computermcqqa.utility.Textview_lato_thin
+                                android:id="@+id/showSelfTestHistorySubCategoryTitleTVctId_12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Correct Ans : 0 of 0"
+                                android:textColor="@color/colorLightGray"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/cardChartBlockCtId_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="50dp">
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:id="@+id/selfTestResultPCctId_12">
+                    </com.github.mikephil.charting.charts.PieChart>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
 
 
         </LinearLayout>

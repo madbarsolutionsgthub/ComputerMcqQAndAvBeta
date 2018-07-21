@@ -118,17 +118,29 @@
                 android:textColor="@color/colorBackroundWhite"
                 android:text="Quit"/>
             <Button
-                android:id="@+id/btnNextId"
+                android:id="@+id/btnFinishQuiz"
                 android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
                 android:background="@drawable/ripple_effect"
                 android:layout_margin="1dp"
                 android:tag="10"
                 android:textSize="12dp"
                 android:textStyle="bold"
-                android:text="Next"
                 android:textColor="@color/colorBackroundWhite"
-                android:layout_weight="1.0" />
+                android:text="Finish Quiz"/>
+            <!--<Button-->
+                <!--android:id="@+id/btnNextId"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="fill_parent"-->
+                <!--android:background="@drawable/ripple_effect"-->
+                <!--android:layout_margin="1dp"-->
+                <!--android:tag="10"-->
+                <!--android:textSize="12dp"-->
+                <!--android:textStyle="bold"-->
+                <!--android:text="Next"-->
+                <!--android:textColor="@color/colorBackroundWhite"-->
+                <!--android:layout_weight="1.0" />-->
         </LinearLayout>
     </RelativeLayout>
 </FrameLayout>

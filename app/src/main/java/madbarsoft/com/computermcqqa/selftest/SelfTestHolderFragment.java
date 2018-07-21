@@ -35,7 +35,7 @@ import madbarsoft.com.computermcqqa.main.QuestionAnswerModel;
 import madbarsoft.com.computermcqqa.utility.INextBtnClickListener;
 
 public class SelfTestHolderFragment extends Fragment {
-    private Button btnNext, btnHome;
+    private Button btnNext, btnHome, btnFinishQuiz;
     private RadioGroup radioBtnGroupId;
     private INextBtnClickListener iNextBtnClickListener;
     private Context context;
@@ -107,36 +107,43 @@ public class SelfTestHolderFragment extends Fragment {
                     public void onClick(View view) {
                         if(radioButton.getId()==currentAnsId) {
                             isCorrectAns = 1;
-                            Toast.makeText(getContext(), "Correct Answer", Toast.LENGTH_SHORT).show();
+                         //   Toast.makeText(getContext(), "Correct Answer", Toast.LENGTH_SHORT).show();
                         } else{
                             isCorrectAns = 0;
-                            Toast.makeText(getContext(), "False Answer" , Toast.LENGTH_SHORT).show();
+                          //  Toast.makeText(getContext(), "False Answer" , Toast.LENGTH_SHORT).show();
                         }
+                        if((currentCategory.getNumberOfQuestion()-1) > currentDataPosition) {
+                            iNextBtnClickListener.nextData((currentDataPosition + 1), isCorrectAns, 0);
+                            return;
+                        }
+                        iNextBtnClickListener.nextData((currentDataPosition), isCorrectAns,1);
+//                        btnNext.setEnabled(false);
+//                        btnNext.setBackgroundColor(Color.GRAY);
+
                     }
                 });
                 radioBtnGroupId.addView(radioButton);
             }
         }
 
-        btnNext = (Button)vu.findViewById(R.id.btnNextId);
+//        btnNext = (Button)vu.findViewById(R.id.btnNextId);
+//        btnNext.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if((currentCategory.getNumberOfQuestion()-1) > currentDataPosition) {
+//                    iNextBtnClickListener.nextData((currentDataPosition + 1), isCorrectAns, 0);
+//                    return;
+//                }
+//                iNextBtnClickListener.nextData((currentDataPosition), isCorrectAns,1);
+//                btnNext.setEnabled(false);
+//                btnNext.setBackgroundColor(Color.GRAY);
+//
+//            }
+//        });
         btnHome = (Button)vu.findViewById(R.id.btnHomeId);
-        btnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if((currentCategory.getNumberOfQuestion()-1) > currentDataPosition) {
-                    iNextBtnClickListener.nextData((currentDataPosition + 1), isCorrectAns, 0);
-                    return;
-                }
-                iNextBtnClickListener.nextData((currentDataPosition), isCorrectAns,1);
-                btnNext.setEnabled(false);
-                btnNext.setBackgroundColor(Color.GRAY);
-
-            }
-        });
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setTitle("Do you want quit from Test ?");
                 //  builder.setMessage("This will be closed application");
@@ -155,6 +162,15 @@ public class SelfTestHolderFragment extends Fragment {
                     }
                 });
                 AlertDialog alertDialog = builder.show();
+            }
+        });
+        btnFinishQuiz = (Button)vu.findViewById(R.id.btnFinishQuiz);
+        btnFinishQuiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                iNextBtnClickListener.nextData((currentDataPosition), isCorrectAns,1);
+//                btnNext.setEnabled(false);
+//                btnNext.setBackgroundColor(Color.GRAY);
             }
         });
         return vu;
