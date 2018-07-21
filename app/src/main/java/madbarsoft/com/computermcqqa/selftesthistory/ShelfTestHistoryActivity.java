@@ -42,7 +42,9 @@ public class ShelfTestHistoryActivity extends AppCompatActivity {
         textView =  findViewById(R.id.showSelfTestHistorySubCategoryTitleTVctId_10);
         textView.setText("Correct Answer: "+selfTestModel.getNumberOfCorrectAns()+" Of "+selfTestModel.getTakenQuestions());
         textView =  findViewById(R.id.showSelfTestHistoryDateTVctId_10);
-        textView.setText("Date: "+outPutFormate.format(selfTestModel.getTestDate()));
+        if(selfTestModel.getTestDate()!=null){
+            textView.setText("Date: "+outPutFormate.format(selfTestModel.getTestDate()));
+        }
         if(selfTestModel.getTakenQuestions()>0){
             pieChart = (PieChart) findViewById(R.id.selfTestResultPCctId_10);
             pieChart.setNoDataText("No Quiz Taken yet...!");
@@ -54,7 +56,9 @@ public class ShelfTestHistoryActivity extends AppCompatActivity {
         textView =  findViewById(R.id.showSelfTestHistorySubCategoryTitleTVctId_11);
         textView.setText("Correct Answer: "+selfTestModel.getNumberOfCorrectAns()+" Of "+selfTestModel.getTakenQuestions());
         textView =  findViewById(R.id.showSelfTestHistoryDateTVctId_11);
-        textView.setText("Date: "+outPutFormate.format(selfTestModel.getTestDate()));
+        if(selfTestModel.getTestDate()!=null){
+            textView.setText("Date: "+outPutFormate.format(selfTestModel.getTestDate()));
+        }
         if(selfTestModel.getTakenQuestions()>0){
             pieChart = (PieChart) findViewById(R.id.selfTestResultPCctId_11);
             pieChart.setNoDataText("No Quiz Taken yet...!");
